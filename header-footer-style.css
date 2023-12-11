@@ -1,0 +1,212 @@
+@import url(root-style.css);
+
+/*Shared styles for desktop and mobile navigation*/
+.shared-styles{
+    border-bottom: 3px solid black;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+}
+
+/*#region desktop nav*/
+    #desktop-nav-container{
+        height: 20vh;
+        width: 100vw;
+        z-index: 1;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        margin-left: 0.4px; /*To match up with the gap that is created with the scroll bar to the right*/
+    }
+    /*Anchor container for logo*/
+    #desktop-nav-container a{
+        width: 60%;
+        height: auto;
+        font-weight: bold;
+    }
+    /*Logo*/
+    #desktop-nav-container a img{
+        width: 100%;
+        aspect-ratio: initial;
+    }
+    nav{
+        width: 100%;
+    }
+    #desktop-nav-container nav ul{
+        width: 100%;
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #desktop-nav-container nav ul li{
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+    }
+    #desktop-nav-container nav li a{
+        color: black;
+        text-decoration: none;
+        -webkit-user-drag: none;
+    }
+    #shopping-cart-li{
+        height: auto;
+        font-weight: bold;
+    }
+    #shopping-bag-icon{
+        aspect-ratio: initial;
+        -webkit-user-drag: none;
+    }
+
+/*#endregion*/
+
+/*#region mobile nav*/
+    #mobile-nav-container{
+        height: 14vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+    /*Anchor container for logo*/
+    header #mobile-nav-container a{
+        height: 40%;
+        aspect-ratio: initial;
+    }
+    /*Logo*/
+    header #mobile-nav-container a img{
+        height: 100%;
+        aspect-ratio: initial;
+    }
+    /*The nav container for the <ul>*/
+    #mobile-nav-container nav{ 
+        list-style: none;
+        width: 100%;
+        height: 100%;
+        top: 14vh;
+        position: fixed;
+        background-color: black;
+        opacity: 85%;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height .5s ease-out;
+    }
+
+    #mobile-menu-checkbox{
+        display: none;
+    }
+    #mobile-menu-checkbox:checked ~ nav{
+        max-height: 100%;
+    }
+    /*The little arrow next to the word "menu"*/
+    #menu-arrow{ 
+        width: 18px;
+        aspect-ratio: 1 / 1;
+        cursor: pointer;
+        transition: transform .5s;
+        -webkit-tap-highlight-color: transparent;
+    }
+    /*label for the checkbox which contains the text MENU and the little arrow*/
+    #mobile-menu-label{ 
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    /*Rotates the arrow*/
+    .mobile-menu:checked ~ label #menu-arrow{ 
+        transform: rotate(-180deg);
+    }
+    #mobile-nav-container nav ul li{
+        opacity: 100%;
+    }
+    #mobile-nav-container nav ul li a{
+        display: block;
+        padding: 30px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        opacity: 100%;
+    }
+/*#endregion*/
+
+/* #region Media queries*/
+    /*For phones*/
+    @media screen and (max-width: 599px) {
+        #desktop-nav-container{
+            display: none;
+        }
+    }
+    /*For tablet potrait up*/
+    @media screen and (min-width: 600px) {
+        #desktop-nav-container{
+            display: none;
+        }
+    }
+
+    /*Breakpoint for mobile verision of site*/
+
+    /*For tablet landscape up + small computers*/
+    @media screen and (min-width: 900px) {
+        #mobile-nav-container{
+            display: none;
+        }
+        #desktop-nav-container{
+            display: flex;
+        }
+        header nav li a{
+            font-size: 1rem;
+        }
+        #shopping-cart-li{
+            font-size: 1rem;
+        }
+        #shopping-bag-icon{
+            height: 1.3rem;           
+        }
+    }
+    /*For desktop up*/
+    @media screen and (min-width: 1200px) {
+        #mobile-nav-container{
+            display: none;
+        }
+        #desktop-nav-container{
+            display: flex;
+        }
+        header nav li a{
+            font-size: 1.1rem;
+        }
+        #shopping-cart-li{
+            font-size: 1.1rem;
+        }
+        #shopping-bag-icon{
+            height: 1.8rem;           
+        }
+    }
+    /*For big desktop*/
+    @media screen and (min-width: 1800px) {
+        #mobile-nav-container{
+            display: none;
+        }
+        #desktop-nav-container{
+            display: flex;
+        }
+        header nav li a{
+            font-size: 1.6rem;
+        }
+        #shopping-cart-li{
+            font-size: 1.6rem;
+        }
+        #shopping-bag-icon{
+            height: 2.3rem;           
+        }
+    }
+/*#endregion*/

@@ -1,0 +1,619 @@
+@import url(root-style.css);
+
+/*Standard rules for each section/article on the frontpage*/
+article{
+    height:80vh;
+
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid black;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/*#region Home*/
+    #home{
+        padding-top: 20vh; /*Needed for content not to be covered by header in first article*/
+    }
+    #home section{
+        width: 65%;
+        height: 100%;
+        border-right: 1.5px solid black;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*text container*/
+    #home section div{ 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-content: space-around;
+
+        align-items: center;
+    }
+    #changingWord{
+        transition: opacity 0.5s ease-in-out;
+        margin-bottom: 0;
+        z-index: 0;
+    }
+    #home section div h1:nth-child(2){
+        margin: 2% 8% 0 8%;
+        text-align: center;
+    }
+    /*link to see product line*/
+    #home section div a{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 15px; 
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 10%;
+        -webkit-user-drag: none;
+    }
+    #home section div a:active{
+        color: black;
+        background-color: white;
+        outline: 2px solid black;
+    }
+    /*image container*/
+    #home aside{ 
+        width: 35%;
+        height: 100%;
+        border-left: 1.5px solid black;
+    }
+    #home aside img{ /*Eventuellt låta bilden klippas utan någon css alls*/
+        height: 110%;
+        -webkit-user-drag: none;
+    }
+/*#endregion*/
+
+/*#region About us*/
+    #about img{
+        width: 50%;
+        height: 100%;
+        border-right: 1.5px solid black;
+        -webkit-user-drag: none;
+    }
+    #about section{
+        background-color: white;
+        width: 50%;
+        height: 100%;
+        border-left: 1.5px solid black;
+    }
+    #about section p{
+        font-size: 1.1rem;
+        margin-right: 2%;
+    }
+/*#endregion*/
+
+/*#region Product section*/
+    #product-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    #product-section h2{
+        margin: 2% 0 0 0;
+    }
+    #first-paragraph{
+        margin: 0;
+    }
+    /*Slide styles */
+    .slider-container {
+        padding: 10px 0;
+        margin: 20px 20px;
+        /*border: 1px solid black;*/
+        width: 90%;
+    }   
+    .slides-wrapper {
+        margin: auto;
+        overflow: hidden;
+    }
+    .slides-container {
+        padding: 0 10px;  
+    }
+    .slider-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        overflow: hidden;
+        transition: 1s;
+    }
+    /*Individual slides*/
+    .slider-item {
+        background-color: #bdbdbd;
+        background-color: black;
+        margin: 0 16px -4px 0;
+        padding: 5px 5px 5px 5px;
+        min-height: 150px;
+        height: fit-content;
+    }
+    .image-link{
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+    }
+    .slider-item a img {
+        width: 100%;
+        height: 100%;
+        -webkit-user-drag: none;
+    }
+    .slider-item section{
+        height: 35px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .slider-item p{
+        font-weight: bold;
+        margin: 0 0 0 6px;
+        color: white;
+    }
+    .buy-button{
+        margin: 0;
+        padding: 3px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        border: 2px solid white;
+        cursor: pointer;
+        -webkit-user-drag: none;
+    }
+    /*slide buttons*/
+    .slider-arrows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: fit-content;
+        padding: 0 10px;
+        margin-top: 10px;
+    }
+    .slider-arrow-prev,
+    .slider-arrow-next {
+        border: none;
+        background-color: #ffffff;
+        color: #212121;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        height: 2rem;
+        aspect-ratio: 1 / 1;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-drag: none;
+    }
+    #all-products-button{
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 15px;
+        margin: 10px;
+        font-weight: bold;
+        -webkit-user-drag: none;
+    }
+    #product-section a:active{
+        color: black;
+        background-color: white;
+        outline: 2px solid black;
+    }
+/*#endregion*/
+
+/*#region Footer*/
+    #footer-newsletter footer {
+        background-color: white;
+        width: 60%;
+        height: 100%;
+        border-right: 1.5px solid black;
+        position: relative;
+    }
+    #footer-newsletter footer section{
+        display: block;
+    }
+
+    #SM-icons{
+        width: fit-content;
+        text-align: center;
+        bottom: 2%;
+        position: absolute;
+    }
+    
+    #SM-icons a img{
+        width: 8%;
+        aspect-ratio: initial;
+    }
+
+    #footer-newsletter footer ul li a {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+/*#endregion*/
+
+/*#region Newsletter*/
+    /*(newsletter part)*/
+    #footer-newsletter aside{ 
+        width: 40%;
+        height: 100%;
+        border-left: 1.5px solid black;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*aside background image*/
+    .hero-image{
+        background-image: url(images/tmp_yiz5sb0.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-user-drag: none;
+    }
+    #footer-newsletter aside h2{
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        margin: 0;
+        /*See font-size in root-file*/
+    }
+    #footer-newsletter aside h3{
+        background-color: white;
+        margin: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        /*See font-size in root-file*/
+    }
+    /*container for email input and submit button*/
+    #footer-newsletter aside div{ 
+        width: 60%;
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: center;
+    }
+    #email-input{
+    width: 70%;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    -webkit-aspect-ratio: 7 / 1;
+    aspect-ratio: 7 / 1;
+    }
+    #submit-button{
+        border: none;
+        background-color: white;
+        padding: 9px 20px;
+        margin-left: 5px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    #submit-button:hover{
+        background-color: rgb(245, 245, 245);
+    }
+    #submit-button:active{
+        background-color: rgb(245, 245, 245);
+        box-shadow: 2px 2px black;
+    }
+/*#endregion*/
+
+
+/* #region Media queries*/
+    /*For really small phones (ex Iphone SE)*/
+    @media screen and (max-width: 400px) {
+        #first-paragraph{ /*Hides first paragraph in product section*/
+            /*display: none;*/
+        }
+    }
+    /*For phones*/
+    @media screen and (max-width: 599px) {
+        article{
+            height:86vh;
+        }
+        /*#region Home*/
+        #home{
+            padding-top: 14vh;
+        }
+        #home section{
+            width: 100%;
+            background-image: url("images/image (4).png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #home section div div{
+            width: 255px;
+            width: 75%;
+            height: fit-content;
+            background-color: white;
+            border-radius: 5px;
+        }
+        #changingWord{
+            z-index: 0;
+            margin-top: 0;
+        }
+        #home section div h1:nth-child(2){
+            background-color: white;
+            border-radius: 5px;
+        }
+        #home section div a{
+            outline: 2px solid white;
+        }
+        /*image container*/
+        #home aside{ 
+            display: none;
+        }
+        #home aside img{
+            display: none;
+        }
+        /*#endregion*/
+
+        /*#region about us*/
+        #about{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        #about img{
+            display: none;
+        }
+        #about section{
+            background-color: white;
+            border-left: none;
+            width: 100%;
+            height: 94%;
+            background-image: url("images/image.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 5%;
+        }
+        /*h2 for about section*/
+        #about section h2{ 
+            margin-top: 5%;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        /*The paragraph in about us section*/
+        #about section p{ 
+            line-height: 1.25;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        /*style for span-tag covering paragraphs*/
+        .about-text-mobile-style{ 
+            background-color: white;
+            border-radius: 5px;
+            padding: 2px; 
+        }
+        /*#endregion*/
+
+        /*#region Product section*/
+        #first-paragraph{
+            margin: 5px 10px 0 10px;
+            text-align: center;
+        }
+        /*#region Newsletter and footer*/
+        /*Container for the two parts*/
+        #footer-newsletter{  
+            display: flex;/*Positions the section and aside in a column instad of next to each other*/
+            flex-direction: column-reverse;
+            align-items: center;
+            height: 172vh;
+        }
+        /*(newsletter part)*/
+        #footer-newsletter aside{ 
+            width: 100%;
+            height: 86vh;
+            border-left: none;
+            border-bottom: 1.5px solid black;
+        }
+        /*container for email input and submit button*/
+        #footer-newsletter aside div{ 
+            width: 80%;
+        }
+        #email-input{
+        width: 80%;
+        padding: 8px 20px;
+        box-sizing: border-box;
+        -webkit-aspect-ratio: 7 / 1;
+        aspect-ratio: 7 / 1;
+        }
+        /*(footer part)*/
+        #footer-newsletter footer { 
+            background-color: white;
+            width: 100%;
+            height: 86vh;
+            border-right: none;
+            border-top: 1.5px solid black;
+        }      
+        #SM-icons a img{
+            width: 12%;
+        }
+        /*#endregion*/
+    }
+    /*For tablet potrait up*/
+    @media screen and (min-width: 600px) and (max-width: 899px) {   
+        article{
+            height:86vh;
+        }
+        #home{
+            padding-top: 14vh;
+        }
+        /*#region about us*/
+        #about img{
+            display: none;
+        }
+        #about section{
+            background-color: white;
+            border-left: none;
+            width: 100%;
+            height: 92%;
+            background-image: url("images/image.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 5%;
+        }
+        /*h2 for about section*/
+        #about section h2{ 
+            margin-top: 5%;
+            font-size: 3rem;
+        }
+        /*The paragraph in about us section*/
+        #about section p{ 
+            line-height: 1.25;
+            font-size: 1.5rem;
+        }
+        /*style for span-tag covering paragraphs*/
+        .about-text-mobile-style{ 
+            background-color: white;
+            border-radius: 5px;
+            padding: 2px;
+        }
+        /*#endregion*/
+
+        /*#region Product section*/
+        #first-paragraph{
+            font-size: 1.5rem;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .slider-container {
+            width: 60%;
+        }
+        /*#endregion*/
+
+        /*#region Newsletter and footer*/
+        /*Container for the two parts*/
+        #footer-newsletter{  
+            display: flex;/*Positions the section and aside in a column instad of next to each other*/
+            flex-direction: column-reverse;
+            align-items: center;
+            height: 86vh;
+        }
+        /*(newsletter part)*/
+        #footer-newsletter aside{
+            width: 100%;
+            height: 43vh;
+            border-left: none;
+            border-bottom: 1.5px solid black;
+        }
+        /*container for email input and submit button*/
+        #footer-newsletter aside div{ 
+            width: 80%;
+        }
+        #footer-newsletter aside h2{
+            font-size: 1.8rem;
+        }
+        #footer-newsletter aside h3{
+            font-size: 1.2rem;
+        }
+        #email-input{
+            width: 60%;
+            padding: 8px 20px;
+            box-sizing: border-box;
+            -webkit-aspect-ratio: 10 / 1;
+            aspect-ratio: 10 / 1;
+        }
+        /*(footer part)*/
+        #footer-newsletter footer { 
+            background-color: white;
+            width: 100%;
+            height: 43vh;
+            border-right: none;
+            border-top: 1.5px solid black;
+        }
+        /*#endregion*/
+
+    }
+
+    /*Breakpoint for mobile version of site*/
+
+    /*For tablet landscape up + small computers*/
+    @media screen and (min-width: 900px) {   
+        article{
+            margin-left: 0.4px; /*To match up with the gap that is created with the scroll bar to the right*/
+        }
+        /*About section*/
+        #about section p{
+            font-size: 1rem;
+        }
+
+        /*Product section*/
+        #product-section h2{
+            font-size: 1.5rem;
+        }
+        #first-paragraph{
+            font-size: 1.2rem;
+        }
+        #all-products-button{
+            font-size: 1rem;
+        }
+
+        /*Footer section*/
+        #footer-newsletter footer section ul li{
+            font-size: 1rem;
+        }    
+    }
+    /*For desktop up*/
+    @media screen and (min-width: 1200px) {   
+        /*About section*/
+        #about section p{
+            font-size: 1.1rem;
+        }
+        /*Product section*/
+        #product-section h2{
+            font-size: 1.6rem;
+        }
+        #first-paragraph{
+            font-size: 1rem;
+        }
+        .slider-container {
+            width: 75%;
+            margin-bottom: 2px;
+        }
+        #all-products-button{
+            font-size: 1rem;
+        }
+        /*Footer section*/
+        #footer-newsletter footer section ul li{
+            font-size: 1rem;
+        }    
+    }
+    /*For big desktop*/
+    @media screen and (min-width: 1800px) {
+        /*About section*/
+        #about section p{
+            font-size: 1.6rem;
+        }
+        /*Product section*/
+        #product-section h2{
+            font-size: 2.5rem;
+        }
+        #first-paragraph{
+            font-size: 1.8rem;
+        }
+        .slider-container {
+            width: 90%;
+          }
+        #all-products-button{
+            font-size: 1.4rem;
+        }
+        /*Footer section*/
+        #footer-newsletter footer section ul li{
+            font-size: 1.6rem;
+        }
+    }
+/*#endregion*/

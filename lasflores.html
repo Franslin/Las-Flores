@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Flores</title>
+    <link rel="stylesheet" href="header-footer-style.css">
+    <link rel="stylesheet" href="LF-style.css">
+    <link rel="icon" href="logo/favicon.png">
+    <script src="slider.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="desktop-nav-container" class="shared-styles"> <!--desktop-nav -->
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <a href="https://frans183.se/lasflores.html"><img src="images/las-flores.png" alt="To start page"></a>
+            <nav>
+                <ul>
+                    <li><a id="toProducts" href="#product-section">Products</a></li> <!--href is for when javascript is disabled-->
+                    <li><span id="shopping-cart-li">Shopping Cart</span><img id="shopping-bag-icon" src="shopping-bag.png" alt=""></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="mobile-nav-container" class="shared-styles">
+            <a href="index.html"><img src="images/las-flores.png" alt="To front page"></a>
+            <input id="mobile-menu-checkbox" class="mobile-menu" type="checkbox">
+            <label id="mobile-menu-label" for="mobile-menu-checkbox"><b>Menu</b>&nbsp;<img id="menu-arrow" src="arrow-down.jpg" alt=""></label>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">- Home -</a></li>
+                    <li><a href="#">- About -</a></li>
+                    <li><a href="#">- Products -</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article id="home">
+            <section>
+                <div>
+                    <div><h1 id="changingWord"> - Unique - </h1></div> <!--255w-->
+                    <h1>T-shirts that stand out from the crowd!</h1>
+                    <a href="">Explore product line</a>
+                </div>
+            </section>
+            <aside>
+                <img src="images/image (4).png" alt="">
+            </aside>
+        </article>
+
+        <article id="about">
+            <img src="images/image.jpg" alt="">
+            <section>
+                <h2><span class="about-text-mobile-style">Our story</span></h2>
+                <p><span class="about-text-mobile-style">Las Flores was founded with the purpouse of making the world a brighter and more colorful place.</span></p>
+                <p><span class="about-text-mobile-style">By capturing the beauty and vibrant colors of nature, we hope to fuel your inspiration in your everyday life.</span></p>
+                <p><span class="about-text-mobile-style"><b>Black clothes are dead, long live colored ones!</b></span></p>
+            </section>
+        </article>
+
+        <article id="product-section">
+            <h2>Products</h2>
+            <p id="first-paragraph">Here is a selection of our prints displayed. To view all products, please click the button</p>
+
+            <div class="slider-container" id="featured-products">
+                <div class="slides-wrapper">
+                  <div class="slides-container">
+                    <ul class="slider-list">
+
+                      <li class="slider-item">
+                        <a href="#">
+                          <img src="images/t-shirts/t1.jpg" alt="Featured Product 1"/>
+                        </a>
+                        <section>
+                          <p>299kr</p>
+                          <a class="buy-button" href="">Buy now</a>
+                        </section>
+                      </li>
+
+                      <li class="slider-item">
+                        <a class="image-link" href="#">
+                          <img src="images/t-shirts/t2.jpg" alt="Featured Product 2"/>
+                        </a>
+                        <section>
+                            <p>299kr</p>
+                            <a class="buy-button" href="">Buy now</a>
+                          </section>
+                      </li>
+
+                      <li class="slider-item">
+                        <a href="#">
+                          <img src="images/t-shirts/t3.jpg" alt="Featured Product 3"/>
+                        </a>
+                        <section>
+                            <p>299kr</p>
+                            <a class="buy-button" href="">Buy now</a>
+                          </section>
+                      </li>
+
+                      <li class="slider-item">
+                        <a href="#">
+                          <img src="images/t-shirts/t4.jpg" alt="Featured Product 4"/>
+                        </a>
+                        <section>
+                          <p>299kr</p>
+                          <a class="buy-button" href="">Buy now</a>
+                        </section>
+                      </li>
+
+                      <li class="slider-item">
+                        <a href="#">
+                          <img src="images/t-shirts/t5.jpg" alt="Featured Product 5"/>
+                        </a>
+                        <section>
+                            <p>299kr</p>
+                            <a class="buy-button" href="">Buy now</a>
+                          </section>
+                      </li>
+
+                      <li class="slider-item">
+                        <a href="#">
+                          <img src="images/t-shirts/t6.jpg" alt="Featured Product 6"/>
+                        </a>
+                        <section>
+                            <p>299kr</p>
+                            <a class="buy-button" href="">Buy now</a>
+                          </section>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="slider-arrows">
+                    <img id="slideLeft" class="arrow-icons slider-arrow-prev" src="arrowleft.jpg" alt="Next">
+                    <a id="all-products-button" href="">See all products</a>
+                    <img id="slideRigth" class="arrow-icons slider-arrow-next" src="arrowrigth.jpg" alt="Previous">
+                </div>
+            </div>
+
+        </article>
+
+        <article id="footer-newsletter">
+            <footer>
+                <h2>General information</h2>
+                <section>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                  </section>
+                  <section id="SM-icons">
+                    <a href="https://www.facebook.com/"><img src="facebook-icon.png" alt="Go to Facebook"></a>
+                    <a href="https://www.instagram.com/"><img src="instagram-icon.png" alt="Go to Instagram"></a>
+                    <a href="https://twitter.com/"><img src="twitter-icon (1).png" alt="Go to Twitter"></a>
+                  </section>
+            </footer>
+            <aside class="hero-image">
+                <h2>Sign up to our newsletter</h2>
+                <h3>(if you don't want to miss a thing)</h3>
+                <div>
+                    <input id="email-input" type="text" placeholder="Email adress"><input id="submit-button" type="submit">
+                </div>
+            </aside>
+        </article>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>

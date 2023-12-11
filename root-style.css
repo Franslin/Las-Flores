@@ -1,0 +1,84 @@
+
+/*General rules*/
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 20vh;
+    font-size: calc(16px + 0.390625vw);
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 1.8rem;
+    margin: 2% 0 0 5%;
+}
+h3{
+    font-size: 1.2rem;
+    margin: 0;
+}
+p{
+    font-size: 1rem;
+    margin: 2% 0 0 5%;
+}
+a{
+    text-decoration: none;
+}
+
+
+/* #region Media queries*/
+    /*For phones*/
+    @media screen and (max-width: 599px) {
+        h1{
+            font-size: 1.9rem;
+        }
+        h2{
+            font-size: 1.5rem;
+            margin: 2% 0 0 5%;
+        }
+        h3{
+            font-size: 0.9rem;
+            margin: 0;
+        }
+    }
+    /*For tablet potrait up*/
+    @media screen and (min-width: 600px) {
+        h1{
+            font-size: 2rem;
+            margin-top: 0;
+        }
+    }
+    /*Breakpoint for mobile verision of site*/
+
+    /*For tablet landscape up + + small computers*/
+    @media screen and (min-width: 900px) {
+        h2{
+            font-size: 1.3rem;
+        }
+        h3{
+            font-size: 0.8rem;
+        }
+    }
+    /*For desktop up*/
+    @media screen and (min-width: 1200px) {
+        h2{
+            font-size: 1.7rem;
+        }
+        h3{
+            font-size: 1.1rem;
+        }
+    }
+    /*For big desktop*/
+    @media screen and (min-width: 1800px) {
+        h2{
+            font-size: 2.2rem;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+/*#endregion*/

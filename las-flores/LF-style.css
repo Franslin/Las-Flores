@@ -256,7 +256,7 @@ article{
     }
     /*aside background image*/
     .hero-image{
-        background-image: url(images/tmp_yiz5sb0.jpg);
+        background-image: url(images/tmp_yiz5sb0.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -327,7 +327,7 @@ article{
         }
         #home section{
             width: 100%;
-            background-image: url("images/image (4).png");
+            background-image: url("images/image (4).webp");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -373,7 +373,7 @@ article{
             border-left: none;
             width: 100%;
             height: 94%;
-            background-image: url("images/image.jpg");
+            background-image: url("images/image.webp");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -460,7 +460,7 @@ article{
             border-left: none;
             width: 100%;
             height: 92%;
-            background-image: url("images/image.jpg");
+            background-image: url("images/image.webp");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;

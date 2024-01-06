@@ -94,11 +94,15 @@
         height: 100%;
         top: 14vh;
         position: fixed;
-        background-color: black;
-        opacity: 85%;
         overflow: hidden;
         max-height: 0;
         transition: max-height .5s ease-out;
+
+        background-image: url(images/tmpiu_mtcpn-faded.webp);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        -webkit-user-drag: none;
     }
 
     #mobile-menu-checkbox{
@@ -106,7 +110,10 @@
     }
     #mobile-menu-checkbox:checked ~ nav{
         max-height: 100%;
+        touch-action: none;
+        -ms-touch-action: none;
     }
+
     /*The little arrow next to the word "menu"*/
     #menu-arrow{ 
         width: 18px;
@@ -126,16 +133,20 @@
     .mobile-menu:checked ~ label #menu-arrow{ 
         transform: rotate(-180deg);
     }
-    #mobile-nav-container nav ul li{
-        opacity: 100%;
+    #mobile-nav-container nav ul {
+        list-style: none;
     }
     #mobile-nav-container nav ul li a{
-        display: block;
+        display: inline-block;
         padding: 30px;
         color: white;
         font-size: 1.5rem;
         font-weight: bold;
-        opacity: 100%;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+    #mobile-nav-container nav ul li a:active{
+        text-decoration: underline;
     }
 /*#endregion*/
 
